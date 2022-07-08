@@ -13,6 +13,7 @@ void gaussian(char *str, int len);
 double mean(char *str);
 double sqrmean(char *s);
 void generate(char *str, int len);
+void trian(char *str, int len);
 //End function declaration
 
 
@@ -290,3 +291,20 @@ fclose(fp);
 
 } 
 //End function for generating samples of V
+void trian(char *str, int len)
+{
+int i;
+FILE *fp;
+double sum;
+
+fp = fopen(str,"w");
+//Generate numbers
+for (int i = 0; i < len; i++){
+	sum = 0;
+	for (int j = 0; j < 2; j++){
+	sum = sum + (double)rand()/RAND_MAX;
+	}
+	fprintf(fp,"%lf\n",sum);
+       }
+       fclose(fp);
+}
