@@ -19,5 +19,5 @@ plt.grid() #creating the grid
 plt.xlabel('$x$')
 plt.ylabel('$F_X(x)$')
 plt.legend(["Numerical", "Theory"])
-plt.savefig('q4.1.png')
+plt.savefig('q4.2.png')
 plt.show() #opening the plot window
